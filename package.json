@@ -27,5 +27,10 @@
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@ui5/webcomponents": "^1.11.0",
+		"@ui5/webcomponents-fiori": "^1.11.0",
+		"@ui5/webcomponents-icons": "^1.11.0"
+	}
 }
