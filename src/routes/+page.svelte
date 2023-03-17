@@ -29,6 +29,7 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 5px;
+		width: 15%;
 	}
 	ui5-shellbar::part(root) {
 		padding-left: 0.5rem;
