@@ -1,13 +1,8 @@
 /** @type {import('./$types').PageLoad} */
-export function load() {
-	return {
-		workitems: [
-			{
-				title: `Foo`
-			},
-			{
-				title: `Bar`
-			}
-		]
-	};
+export async function load({ fetch }) {
+	const res = await fetch(`http://localhost:4004/timetracking/WorkItems`);
+
+	const { value } = await res.json();
+
+	return { workitems: value };
 }

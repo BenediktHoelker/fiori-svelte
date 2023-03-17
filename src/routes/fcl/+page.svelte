@@ -3,7 +3,7 @@
 
 	import '@ui5/webcomponents/dist/Button';
 	import '@ui5/webcomponents/dist/List';
-	import '@ui5/webcomponents/dist/ListItem';
+	import '@ui5/webcomponents/dist/StandardListItem';
 	import '@ui5/webcomponents-fiori/dist/ShellBar';
 	import '@ui5/webcomponents-fiori/dist/FlexibleColumnLayout';
 
@@ -16,7 +16,7 @@
 	<div slot="startColumn">
 		<ui5-shellbar primary-title="Dep. New York, USA" />
 
-		<ui5-list id="col1list" header-text="Employees">
+		<ui5-list id="col1list" header-text="Employees" growing="Scroll" style="height: 91vh">
 			{#each data.workitems as workitem (workitem.title)}
 				<ui5-li>{workitem.title}</ui5-li>
 			{/each}
