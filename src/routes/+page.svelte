@@ -19,17 +19,17 @@
 </ui5-shellbar>
 
 <div class="with-sidebar">
-	<div class="sidebar" style="display: flex; flex-direction: column;">
-		<ui5-page id="masterPage" background-design="List">
-			<ui5-bar slot="header">
-				<ui5-daterange-picker />
-			</ui5-bar>
-			<ui5-list mode="SingleSelect">
-				{#each data.workitems as workitem (workitem.title)}
-					<ui5-li>{workitem.title}</ui5-li>
-				{/each}
-			</ui5-list>
-		</ui5-page>
+	<div class="sidebar" style="display: flex; flex-direction: column">
+		<!-- <ui5-page id="masterPage" background-design="List">
+			<ui5-bar slot="header"> -->
+		<ui5-daterange-picker />
+		<!-- </ui5-bar> -->
+		<ui5-list mode="SingleSelect" style="height: 85.6vh">
+			{#each data.workitems as workitem (workitem.title)}
+				<ui5-li>{workitem.title}</ui5-li>
+			{/each}
+		</ui5-list>
+		<!-- </ui5-page> -->
 	</div>
 	<div class="content">
 		<ui5-page id="detailPage" background-design="List" floating-footer show-footer>
@@ -54,10 +54,6 @@
 	.sidebar {
 		flex-direction: column;
 		gap: 6px;
-	}
-
-	.content {
-		min-height: 91vh;
 	}
 
 	.with-sidebar > :first-child {
