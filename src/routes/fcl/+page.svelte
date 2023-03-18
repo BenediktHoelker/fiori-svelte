@@ -17,10 +17,8 @@
 <ui5-flexible-column-layout id="fcl" layout="TwoColumnsMidExpanded">
 	<!-- start column -->
 	<div slot="startColumn">
-		<!-- <ui5-shellbar primary-title="Dep. New York, USA" /> -->
-
 		<ui5-daterange-picker />
-		<ui5-list id="col1list" header-text="Employees" growing="Scroll" style="height: 91vh">
+		<ui5-list id="col1list" header-text="Employees" growing="Scroll" style="height: 100%">
 			{#each data.workitems as workitem (workitem.title)}
 				<ui5-li>{workitem.title}</ui5-li>
 			{/each}
@@ -28,7 +26,7 @@
 	</div>
 
 	<!-- middle column -->
-	<ui5-page id="detailPage" background-design="List" slot="midColumn" floating-footer show-footer>
+	<ui5-page id="detailPage" background-design="List" slot="midColumn" show-footer>
 		<div slot="footer">
 			<ui5-bar design="FloatingFooter">
 				<ui5-button design="Positive" slot="endContent">Agree</ui5-button>
